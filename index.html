@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    
-  </body>
+</head>
+
+<body>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required placeholder="Entrez votre prénom" >
+            <br ><br >
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required placeholder="Entrez votre nom" >
+            <br ><br >
+
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" min="1" max="120" required placeholder="Entrez votre âge" >
+            <br ><br >
+
+            <label>Sexe :</label>
+            <input type="radio" id="homme" name="sexe" value="homme" required >
+            <label for="homme">Homme</label>
+            <input type="radio" id="femme" name="sexe" value="femme" required >
+            <label for="femme">Femme</label>
+            <input type="radio" id="autre" name="sexe" value="autre" required >
+            <label for="autre">Autre</label>
+            <br ><br >
+
+            <label for="email">Adresse Mail :</label>
+            <input type="email" id="email" name="email" required placeholder="Entrez votre adresse mail" >
+            <br ><br >
+
+            <label for="adresse">Adresse postale :</label>
+            <input type="text" id="adresse" name="adresse" required placeholder="Entrez votre adresse" >
+            <br ><br >
+
+            <label for="codepostal">Code postal :</label>
+            <input type="text" id="codepostal" name="codepostal" maxlength="5" pattern="[0-9]{5}" required >
+            <br ><br >
+
+            <label for="ville">Ville :</label>
+            <input type="text" id="ville" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required >
+            <br ><br >
+
+            <label for="metierexerce">Métier exercé :</label>
+            <select name="metierexerce" id="metierexerce" required>
+                <option value="" label="Choisissez un métier"></option>
+                <option value="prof">Professeur</option>
+                <option value="medecin">Médecin</option>
+                <option value="plombier">Plombier</option>
+                <option value="electricien">Électricien</option>
+                <option value="dev">Développeur web</option>
+            </select>
+            <br><br>
+
+            <label for="nationalite">Nationalité :</label>
+            <select name="nationalite" id="nationalite" required>
+                <option value="" label="Choisissez une nationalité"></option>
+                <option value="fr" selected >Française</option>
+                <option value="en">Anglaise</option>
+                <option value="de">Allemande</option>
+                <option value="it">Italienne</option>
+                <option value="es">Espagnole</option>
+                <option value="ot">Autre</option>
+            </select>
+            <br><br>
+
+            <label for="datenaiss">Date de naissance :</label>
+            <input type="date" id="datenaiss" name="datenaiss" min="1950-01-01" max="2008-12-31" required>
+            <br><br>
+
+            <label for="paysn">Pays de naissance :</label>
+            <input type="text" id="paysn" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required placeholder="Entrez votre pays de naissance">
+            <br><br>
+
+            <label for="numsecu">Numéro de sécurité sociale :</label>
+            <input type="text" id="numsecu" name="numsecu" maxlength="15" pattern="[0-9]{15}" required >
+            <br ><br >
+
+            <label for="numpass">Numéro du passeport :</label>
+            <input type="text" id="numpass" name="numpass" maxlength="9" required >
+            <br ><br >
+
+            <label for="datedel">Date de délivrance du passeport :</label>
+            <input type="date" id="datedel" name="datedel" min="2014-10-16" max="2024-10-16" required>
+            <br><br>
+
+            <label for="dateval">Date de validité du passeport :</label>
+            <input type="date" id="dateval" name="dateval" min="2024-10-16" max="2034-10-16" required>
+            <br><br>
+
+            <input type="submit" value="Soumettre">
+        </fieldset>
+    </form>
+</body>
+
 </html>
